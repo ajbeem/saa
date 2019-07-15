@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".beginActivity"
+    tools:showIn="@layout/activity_begin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewCodeBars"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minWidth="250dp"
+                android:minHeight="250dp"
+                app:srcCompat="@mipmap/ic_bar_code" />
+
+            <TableLayout
+                android:layout_width="350dp"
+                android:paddingLeft="15dp"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    >
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageViewPlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_place_icon"
+                        android:paddingRight="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btnFindParking"
+                        android:layout_width="241dp"
+                        android:layout_height="75dp"
+                        android:background="@color/colorGreen"
+                        android:text="@string/findParking"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageViewCC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_credit_card_icon"
+                        android:paddingRight="10dp"
+                        />
+
+                    <Button
+                        android:id="@+id/btnManagePayMethods"
+                        android:layout_width="241dp"
+                        android:layout_height="75dp"
+                        android:background="@color/colorGreen"
+                        android:text="@string/managePayMethods"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageViewLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_power_off_icon"
+                        android:paddingRight="10dp"
+                        >
+                        <Button
+                            android:id="@+id/btnCloseSession"
+                            android:layout_width="241dp"
+                            android:layout_height="75dp"
+                            android:background="@color/colorGreen"
+                            android:text="@string/logout"
+                            android:textColor="@android:color/background_light"
+                            android:textSize="18sp" />
+                    </ImageView>
+
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

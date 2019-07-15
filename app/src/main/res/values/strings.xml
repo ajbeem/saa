@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Saa</string>
+    <string name="app_title">Saa</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -13,4 +14,38 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="title_activity_login">Ingresar</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">"INICIAR SESION"</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="tagInfoLogin">
+        "PARA AYUDARTE A ENCONTRAR EL MEJOR LUGAR DISPONIBLE, POR FAVOR, PRIMERO IDENTÍFICATE"
+    </string>
+    <string name="rememberMe">
+        "Recordarme"
+    </string>
+    <string name="forgotPassword">
+        "Olvidaste Tu contraseña?"
+    </string>
+    <string name="notAccount">
+        "¿Aún no tienes Cuenta?"
+    </string>
+    <string name="register">
+        "Registrarse"
+    </string>
+    <string name="title_activity_begin">INICIO</string>
+    <string name="findParking">
+        "ENCUENTRA TU ESTACIONAMIENTO"
+    </string>
+    <string name="managePayMethods">
+        "ADMINISTRAR TUS MÉTODOS DE PAGO"
+    </string>
+    <string name="logout">
+        "CERRAR SESIÓN"
+    </string>
 </resources>
