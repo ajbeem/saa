@@ -48,4 +48,6 @@
     <string name="logout">
         "CERRAR SESIÓN"
     </string>
+    <string name="longName">Space Always Available</string>
+    <string name="webMasterContact">alfred.webMaster@pcentaury.com</string>
 </resources>

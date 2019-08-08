@@ -21,7 +21,7 @@ import android.widget.Toast;
 import com.pcentaury.saa.R;
 import com.pcentaury.saa.ui.login.LoginViewModel;
 import com.pcentaury.saa.ui.login.LoginViewModelFactory;
-
+/*
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
@@ -124,4 +124,4 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }
-}
+}*/
