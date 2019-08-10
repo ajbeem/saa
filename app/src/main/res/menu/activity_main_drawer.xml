@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/menu_home" />
+            android:id="@+id/main_nav_barCode"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Mi ID" />
+
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/main_nav_findParking"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Buscar Estacionamiento" />
+
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/main_nav_managePayMethods"
+            android:icon="@drawable/ic_dollar"
+            android:title="Metodos de Pago" />
+
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/menu_tools" />
+            android:id="@+id/main_nav_closeSession"
+            android:icon="@drawable/ic_power_off_icon"
+            android:title="@string/logout" />
+
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Opciones">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_share" />
+                android:id="@+id/nav_tiempo"
+                android:icon="@drawable/ic_time"
+                android:title="@string/time" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="@string/menu_send" />
+                android:id="@+id/nav_balance"
+                android:icon="@drawable/ic_dollar"
+                android:title="@string/balance" />
+            <item
+                android:id="@+id/nav_configuracion"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/config" />
+            <item
+                android:id="@+id/nav_tools"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/herram" />
+
         </menu>
     </item>
 

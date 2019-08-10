@@ -51,4 +51,13 @@
     <string name="longName">Space Always Available</string>
     <string name="webMasterContact">alfred.webMaster@pcentaury.com</string>
     <string name="title_activity_choose_parking">SELECCIONA TU ESTACIONAMIENTO</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="balance">Balance</string>
+    <string name="time">Tiempo</string>
+    <string name="config">Configuración</string>
+    <string name="herram">Herramientas</string>
+    <string name="addPayMethod">Agregar Nuevo Método de pago</string>
+    <string name="payHistory">Historial de Pagos</string>
 </resources>

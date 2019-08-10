@@ -17,4 +17,15 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="botones">
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_width">32dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="mainMenu">
+        <item name="android:layout_width">@dimen/fullScreen</item>
+        <item name="android:textSize">@dimen/smallText</item>
+    </style>
+
 </resources>

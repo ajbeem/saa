@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="minimo_xlarge">32dp</dimen>
+    <dimen name="medio_xlarge">64dp</dimen>
+    <dimen name="largo_xlarge">128dp</dimen>
+    <dimen name="maximo_xlarge">600dp</dimen>
+    <dimen name="texto_xlarge">24sp</dimen>
+
+</resources>

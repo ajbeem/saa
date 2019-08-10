@@ -130,22 +130,26 @@ public class chooseParking extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Handle navigation view item clicks here. configuracion, cost, tiempo, tools
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id. configuracion) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Toast.makeText(getApplicationContext(),"Configuracion", Toast.LENGTH_LONG).show();
+        } else if (id == R.id.cost) {
+            Toast.makeText(getApplicationContext(),"Costo", Toast.LENGTH_LONG).show();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.tiempo) {
+            Toast.makeText(getApplicationContext(),"Tiempo", Toast.LENGTH_LONG).show();
 
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.tools) {
+            Toast.makeText(getApplicationContext(),"Herramientas", Toast.LENGTH_LONG).show();
 
-        } else if (id == R.id.nav_share) {
+        } /*else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 
-        }
+        }*/
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

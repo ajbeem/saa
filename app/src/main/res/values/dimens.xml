@@ -6,4 +6,19 @@
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="vertical_items_margin">15dp</dimen>
+
+    <dimen name="fullScreen">350dp</dimen>
+    <dimen name="smallText">8sp</dimen>
+
+    <dimen name="minimo_normal">16dp</dimen>
+    <dimen name="medio_normal">32dp</dimen>
+    <dimen name="largo_normal">64dp</dimen>
+    <dimen name="maximo_normal">300dp</dimen>
+    <dimen name="texto_normal">12sp</dimen>
+
+    <dimen name="minimo_xlarge">32dp</dimen>
+    <dimen name="medio_xlarge">64dp</dimen>
+    <dimen name="largo_xlarge">128dp</dimen>
+    <dimen name="maximo_xlarge">600dp</dimen>
+    <dimen name="texto_xlarge">24sp</dimen>
 </resources>

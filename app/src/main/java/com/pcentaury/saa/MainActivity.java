@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.support.v4.view.GravityCompat;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -26,8 +27,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Button btEncontrarEstacionamiento, btAdministrarMetodosPago, btCerrarSesion;
-    //btnFindParking, btnMainPayManagement, btnMainCloseSession
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,29 +34,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        btEncontrarEstacionamiento = (Button)findViewById(R.id.btnMainFindParking);
-        btEncontrarEstacionamiento.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FindParking();
-            }
-        });
-
-        btAdministrarMetodosPago = (Button)findViewById(R.id.btnMainPayManagement);
-        btAdministrarMetodosPago.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //PayManagement();
-            }
-        });
-        btCerrarSesion = (Button)findViewById(R.id.btnMainCloseSession);
-        btCerrarSesion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CloseSession();
-            }
-        });
         /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,48 +88,32 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+//nav_configuracion, nav_balance, nav_tiempo, nav_tools
+        FragmentManager fragMg = getSupportFragmentManager();
 
-        if (id == R.id.nav_home) {
-            // Handle the camera action
-            Toast errorVersion = Toast.makeText(getApplicationContext(),
-                    "Ir a Home"
-                    , Toast.LENGTH_LONG);
-            errorVersion.show();
-        } else if (id == R.id.nav_gallery) {
-            Toast.makeText(getApplicationContext(), "Galeria de Fotos", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_slideshow) {
-            AlertDialog.Builder alertActuacionGPS = new AlertDialog.Builder(this);
-            alertActuacionGPS.setTitle("SLIDE SHOW");
-            alertActuacionGPS.setMessage("IR A GALERÍA?").setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    // FIRE ZE MISSILES!
-                }
-            });
-            alertActuacionGPS.show();
+        if (id== R.id.main_nav_barCode) {
+            fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentInicio()).commit();
+        }else if (id == R.id.main_nav_findParking) {
+            fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentChooseParking()).commit();
+
+        }else if(id == R.id.main_nav_managePayMethods){
+            fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentPayManager()).commit();
+
+        }else if (id == R.id.main_nav_closeSession) {
+            //fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentInicio()).commit();
+            this.finish();
+
+        }else if (id == R.id.nav_configuracion) {
+            Toast.makeText(getApplicationContext(),"Configuracion", Toast.LENGTH_LONG).show();
+
+        } else if (id == R.id.nav_balance) {
+            Toast.makeText(getApplicationContext(), "Balance", Toast.LENGTH_SHORT).show();
+
+        } else if (id == R.id.nav_tiempo) {
+            Toast.makeText(getApplicationContext(), "Tiempo", Toast.LENGTH_SHORT).show();
+
         } else if (id == R.id.nav_tools) {
-            //Inicialización
-            AlertDialog.Builder nuevaAlerta = new AlertDialog.Builder(this);
-            //establecer título
-            nuevaAlerta.setTitle("Herramientas");
-            //Mensaje de Cuerpo
-            nuevaAlerta.setMessage("Mostrar Herramientas?").setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
-                // Establecer acciones para Aceptar
-                public void onClick(DialogInterface dialog, int id) {
-                    //Acciones para el botón Aceptar
-
-                }
-                //establecer acciones para botón cancelar
-            }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    // Acciones para el botón cancel
-                } });
-            //Mostrar diálogo
-            nuevaAlerta.show();
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+            Toast.makeText(getApplicationContext(), "Herramientas", Toast.LENGTH_SHORT).show();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -161,38 +121,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    /*@Override
-    public void onClick(View view) {
-        int id = view.getId();
-        switch (id){
-            case R.id.btnMainFindParking:
 
-                break;
-            case R.id.btnMainPayManagement:
-                PayManagement();
-                break;
-            case  R.id.btnMainCloseSession:
-                CloseSession();
-                break;
-        }
-    }*/
-
-    private void FindParking(){
-        Intent goChooseParking = new Intent(this, chooseParking.class);
-        startActivity(goChooseParking);
-        // this.finish();
-    }
-
-   /* private void PayManagement(){
-        Intent goPayManager = new Intent(this, payManager.class);
-        //goPayManager.putExtra("userName", user);
-        startActivity(goPayManager);
-        // this.finish();
-    }*/
-
-    private void CloseSession(){
-        Intent goCloseSession = new Intent(this, ingresar.class);
-        startActivity(goCloseSession);
-        this.finish();
-    }
 }
+
