@@ -61,4 +61,8 @@
     <string name="addPayMethod">Agregar Nuevo Método de pago</string>
     <string name="payHistory">Historial de Pagos</string>
     <string name="refresh">Actualizar</string>
+    <string name="welcomereg">Bienvenido a la Familia SAA</string>
+    <string name="infoUser00">Primero obsequianos tus datos Generales.</string>
+    <string name="signData">Escribe los datos a utilizar para ingresar a la plataforma.</string>
+    <string name="ready">Listo</string>
 </resources>

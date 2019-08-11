@@ -48,10 +48,10 @@ public class FragmentChooseParking extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View chooseParking = inflater.inflate(R.layout.fragment_fragment_choose_parking, container, false);
-        etLatitud = chooseParking.findViewById(R.id.fragmentlatitudValue);
-        etLongitud = chooseParking.findViewById(R.id.fragmentlongitudTag);
+        etLatitud = (EditText)chooseParking.findViewById(R.id.fragmentlatitudValue);
+        etLongitud = (EditText)chooseParking.findViewById(R.id.fragmentlongitudValue);
 
-        /*FloatingActionButton fab = chooseParking.findViewById(R.id.fragmentFabLocation);
+        FloatingActionButton fab = (FloatingActionButton)chooseParking.findViewById(R.id.fragmentFabLocation);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,8 +59,7 @@ public class FragmentChooseParking extends Fragment {
                         .setAction("Action", null).show();
                 GPSLocation();
             }
-        });*/
-
+        });
        /* btEncontrarEstacionamiento = (Button) InicioView.findViewById(R.id.btnFragmentFindParking);
         btEncontrarEstacionamiento.setOnClickListener(new View.OnClickListener() {
             @Override

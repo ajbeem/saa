@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });*/
+        });
         btEncontrarEstacionamiento = (Button)findViewById(R.id.btnMainFindParking);
         btEncontrarEstacionamiento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                CloseSession();
             }
-        });
+        });*/
         fragMg = getSupportFragmentManager();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);

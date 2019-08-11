@@ -16,10 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".register"></activity>
         <activity
             android:name=".chooseParking"
             android:label="@string/title_activity_choose_parking"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ingresar"
             android:label="@string/app_title"
