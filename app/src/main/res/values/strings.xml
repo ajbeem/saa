@@ -60,4 +60,5 @@
     <string name="herram">Herramientas</string>
     <string name="addPayMethod">Agregar Nuevo Método de pago</string>
     <string name="payHistory">Historial de Pagos</string>
+    <string name="refresh">Actualizar</string>
 </resources>

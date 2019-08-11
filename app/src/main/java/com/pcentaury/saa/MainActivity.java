@@ -27,7 +27,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    //region Artibutes
+    private Button btEncontrarEstacionamiento, btAdministrarMetodosPago, btCerrarSesion;
+    private FragmentManager fragMg;
+    //endregion
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,32 @@ public class MainActivity extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });*/
+        btEncontrarEstacionamiento = (Button)findViewById(R.id.btnMainFindParking);
+        btEncontrarEstacionamiento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               FindParking();
+                Toast.makeText(getApplicationContext(),"ENCONTRAR ESTACIONAMIENTO", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btAdministrarMetodosPago = (Button)findViewById(R.id.btnMainPayManagement);
+        btAdministrarMetodosPago.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PayManagement();
+                Toast.makeText(getApplicationContext(), "METODOS DE PAGO", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btCerrarSesion = (Button)findViewById(R.id.btnMainCloseSession);
+        btCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               CloseSession();
+            }
+        });
+        fragMg = getSupportFragmentManager();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -89,7 +118,6 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 //nav_configuracion, nav_balance, nav_tiempo, nav_tools
-        FragmentManager fragMg = getSupportFragmentManager();
 
         if (id== R.id.main_nav_barCode) {
             fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentInicio()).commit();
@@ -119,6 +147,16 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    private void FindParking(){
+        fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentChooseParking()).commit();
+        // this.finish();
+    }
+    private void PayManagement() {
+        fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentPayManager()).commit();
+    }
+    private void CloseSession(){
+        this.finish();
     }
 
 

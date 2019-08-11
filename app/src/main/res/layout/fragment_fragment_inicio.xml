@@ -11,100 +11,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="20dp">
-
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@mipmap/ic_bar_code" />
-
-        <!--TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="20dp">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp">
-
-                <ImageView
-                    android:id="@+id/IV_Main_position"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:src="@drawable/ic_place_icon" />
-
-                <Button
-                    android:id="@+id/btnFragmentFindParking"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/colorGreen"
-                    android:fontFamily="@font/allerta"
-                    android:text="@string/findParking"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp">
-
-                <ImageView
-                    android:id="@+id/IV_Main_pay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:src="@drawable/ic_credit_card_icon" />
-
-                <Button
-                    android:id="@+id/btnFragmentPayManagement"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/colorGreen"
-                    android:fontFamily="@font/allerta"
-                    android:text="@string/managePayMethods"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="20dp">
-
-                <ImageView
-                    android:id="@+id/IV_Main_closeSession"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:src="@drawable/ic_power_off_icon" />
-
-                <Button
-                    android:id="@+id/btnFragmentCloseSession"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@color/colorGreen"
-                    android:fontFamily="@font/allerta"
-                    android:text="@string/logout"
-                    android:textColor="@android:color/background_light"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </TableLayout-->
-
+            android:layout_height="match_parent"
+            android:src="@drawable/barcode_02"
+            android:layout_gravity="center_vertical">
+        </ImageView>
     </LinearLayout>
 
 

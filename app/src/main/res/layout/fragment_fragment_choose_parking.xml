@@ -66,6 +66,13 @@
             </TableRow>
         </TableLayout>
 
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:text="@string/refresh"
+        />
+
         <Button
             android:id="@+id/fragmentRefreshLocation"
             android:layout_width="wrap_content"
@@ -73,7 +80,16 @@
             android:layout_gravity="end"
             android:background="@android:color/background_light"
             android:drawableEnd="@drawable/ic_place_icon"
-            android:text="Refresh" />
+            android:text="@string/refresh"/-->
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fragmentFabLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_place_icon"
+            android:text="@string/refresh"/>
     </LinearLayout>
 
 </FrameLayout>
