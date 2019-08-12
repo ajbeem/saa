@@ -2,6 +2,7 @@ package com.pcentaury.saa;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +26,7 @@ public class register extends AppCompatActivity {
     //region Atributes
     private EditText etCNames, etClastName, etCBirthDate, etCUserMail, etCUser, etCPassword;
     private RequestQueue requestQueue;
-    private String urlLogin = "http://www.diot.esy.es/php/usersRegJSON.php?";
+    private String urlLogin = "http://www.diot.esy.es/php/altaUsuariosJSON.php?";
     //endregion
 
     @Override
@@ -36,8 +37,7 @@ public class register extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Guardar datos", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                userRegisterData();
             }
         });
         //region properties
@@ -97,7 +97,7 @@ public class register extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"" + response.getString("user")+"\n Utiliza tu contraseña para Ingresar", Toast.LENGTH_LONG).show();
                                 goLogin();
                             } else {
-                                Toast.makeText(getApplicationContext(),""+response.getString("answer"), Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(),""+response.getString("answer")+"\n"+ response.getString("message"), Toast.LENGTH_LONG).show();
                             }
                         } catch (JSONException e) {
                             Toast unsavedToast = Toast.makeText(getApplicationContext(),
@@ -118,5 +118,8 @@ public class register extends AppCompatActivity {
     }
 
     private void goLogin() {
+            Intent goN = new Intent(this, ingresar.class);
+            startActivity(goN);
+            this.finish();
     }
 }

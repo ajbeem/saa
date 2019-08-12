@@ -90,6 +90,11 @@
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/ic_place_icon"
             android:text="@string/refresh"/>
+
+        <ListView
+            android:id="@+id/parkingList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </FrameLayout>

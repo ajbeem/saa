@@ -88,6 +88,7 @@ public class ingresar extends AppCompatActivity implements View.OnClickListener 
                 newUser.setTitle("Register");
                 newUser.setMessage("Deseas Registrarte?").setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        startUserReg();
                     }
                 }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -165,6 +166,12 @@ public class ingresar extends AppCompatActivity implements View.OnClickListener 
     private void startMainActivity(String user) {
         Intent goN = new Intent(this, MainActivity.class);
         goN.putExtra("userName", user);
+        startActivity(goN);
+        this.finish();
+    }
+
+    private void startUserReg() {
+        Intent goN = new Intent(this, register.class);
         startActivity(goN);
         this.finish();
     }
