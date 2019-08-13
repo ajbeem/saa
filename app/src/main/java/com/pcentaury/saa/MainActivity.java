@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity
                CloseSession();
             }
         });*/
-        fragMg = getSupportFragmentManager();
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -78,6 +77,9 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        fragMg = getSupportFragmentManager();
+        fragMg.beginTransaction().replace(R.id.mainContainer, new FragmentInicio()).commit();
+
     }
 
     @Override

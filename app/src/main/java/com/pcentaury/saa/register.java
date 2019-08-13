@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class register extends AppCompatActivity {
     private EditText etCNames, etClastName, etCBirthDate, etCUserMail, etCUser, etCPassword;
     private RequestQueue requestQueue;
     private String urlLogin = "http://www.diot.esy.es/php/altaUsuariosJSON.php?";
+    private Button btnHome;
     //endregion
 
     @Override
@@ -38,6 +40,15 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 userRegisterData();
+            }
+        });
+
+        btnHome = (Button)findViewById(R.id.home);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Volver al Inicio", Toast.LENGTH_SHORT).show();
+                goLogin();
             }
         });
         //region properties

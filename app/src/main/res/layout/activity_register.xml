@@ -53,6 +53,13 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
 
+            <EditText
+                android:id="@+id/etNames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
             <TextView
                 android:id="@+id/userNameTag"
                 android:layout_width="match_parent"
@@ -61,11 +68,12 @@
                 android:textAlignment="center" />
 
             <EditText
-                android:id="@+id/etNames"
+                android:id="@+id/etlastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:paddingTop="15dp" />
 
             <TextView
                 android:id="@+id/userLastNameTag"
@@ -75,11 +83,12 @@
                 android:textAlignment="center" />
 
             <EditText
-                android:id="@+id/etlastName"
+                android:id="@+id/etBirthDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:paddingTop="15dp" />
 
             <TextView
                 android:id="@+id/birthDateTag"
@@ -89,11 +98,12 @@
                 android:textAlignment="center" />
 
             <EditText
-                android:id="@+id/etBirthDate"
+                android:id="@+id/etUserMail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:paddingTop="15dp" />
 
             <TextView
                 android:id="@+id/userMailTag"
@@ -102,23 +112,25 @@
                 android:text="Correo Electrónico"
                 android:textAlignment="center" />
 
-            <EditText
-                android:id="@+id/etUserMail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
-
             <TextView
                 android:id="@+id/infoTag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorGreen"
                 android:fontFamily="@font/arimo"
+                android:paddingTop="25dp"
                 android:text="@string/signData"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingTop="15dp" />
 
             <TextView
                 android:id="@+id/userTag"
@@ -128,11 +140,12 @@
                 android:textAlignment="center" />
 
             <EditText
-                android:id="@+id/etUser"
+                android:id="@+id/etPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:paddingTop="15dp" />
 
             <TextView
                 android:id="@+id/passwordTag"
@@ -140,13 +153,12 @@
                 android:layout_height="wrap_content"
                 android:text="Contraseña"
                 android:textAlignment="center" />
-
-            <EditText
-                android:id="@+id/etPassword"
+            <TextView
+                android:id="@+id/infoRegisterTag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:text="Para enviar tus datos pulsa en el botón Amarillo"
+                android:textAlignment="center" />
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/fabRegisterSaa"
@@ -156,6 +168,20 @@
                 android:layout_margin="@dimen/fab_margin"
                 app:backgroundTint="@android:color/holo_orange_light"
                 app:srcCompat="@drawable/ic_ready_all" />
+
+            <Button
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@android:color/transparent"
+                android:backgroundTint="@android:color/transparent"
+                android:drawableTop="@drawable/ic_home"
+                android:drawablePadding="5dp"
+                android:text="Volver al Inicio"
+                android:textColor="@android:color/black" />
+
+
         </LinearLayout>
     </ScrollView>
 
