@@ -1,3 +1,9 @@
+//  FragmentChooseParking.java
+//  Project:    Saa
+//  Created by SDE. Alfredo Jiménez Miguel on 12/07/19.
+//  Copyright © 2019 com.pcentaury All rights reserved.
+//
+
 package com.pcentaury.saa;
 
 
@@ -17,8 +23,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.support.v4.content.ContextCompat.getSystemService;
 
@@ -35,6 +46,17 @@ public class FragmentChooseParking extends Fragment {
     private LocationListener locListener;
     private Location loc;
     private EditText etLatitud, etLongitud;
+    private ListView listaEst;
+    private adapter adaptador;
+    private ArrayAdapter<String> itemsAdapter;
+
+    String[][] datos = {
+            {"Plaza Ferreria", "Eje 4 Nte. (Calz. Azcapotzalco La Villa), Col. Santa Catarina", "7", "6"},
+            {"Estacionaiento GAMMA", "Antigua Calz. de Guadalupe 308, Col. Santa Catarina", "5", "10"},
+            {"Alcamare", "Cerrada de las Granjas 85, El Jaguey", "10", "5"},
+            {"PAGGANI", "Av. De las Granjas 758B, Santa Catarina", "3", "7"},
+            {"Doble Vela", "Av. de las Granjas 161, El Jaguey", "6", "7"}
+    };
 
 //endregion
 
@@ -48,16 +70,20 @@ public class FragmentChooseParking extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View chooseParking = inflater.inflate(R.layout.fragment_fragment_choose_parking, container, false);
-        etLatitud = (EditText)chooseParking.findViewById(R.id.fragmentlatitudValue);
-        etLongitud = (EditText)chooseParking.findViewById(R.id.fragmentlongitudValue);
+        etLatitud = (EditText) chooseParking.findViewById(R.id.fragmentlatitudValue);
+        etLongitud = (EditText) chooseParking.findViewById(R.id.fragmentlongitudValue);
+        listaEst = (ListView)chooseParking.findViewById(R.id.fragmentParkingList);
 
-        FloatingActionButton fab = (FloatingActionButton)chooseParking.findViewById(R.id.fragmentFabLocation);
+        adaptador = new adapter(getActivity(), parkingArray());
+
+        FloatingActionButton fab = (FloatingActionButton) chooseParking.findViewById(R.id.fragmentFabLocation);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Geolocalizando tu Ubicación", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Geolocalizando tu Ubicación, y Buscando Estacionamientos", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 GPSLocation();
+                listaEst.setAdapter(adaptador);
             }
         });
        /* btEncontrarEstacionamiento = (Button) InicioView.findViewById(R.id.btnFragmentFindParking);
@@ -88,9 +114,19 @@ public class FragmentChooseParking extends Fragment {
 
         return chooseParking;
     }
+    private ArrayList<parkings> parkingArray(){
+        ArrayList <parkings> parkItems = new ArrayList<>();
+        parkItems.add(new parkings("Estacionamiento GAMMA", "Antigua Calz. de Guadalupe 308, Col. Santa Catarina", "5", 4.5));
+        parkItems.add(new parkings("Alcamare", "Cerrada de las Granjas 85, El Jaguey", "10", 1.0));
+        parkItems.add(new parkings("PAGGANI", "Av. De las Granjas 758B, Santa Catarina", "3", 3.0));
+        parkItems.add(new parkings("Plaza Ferreria", "Eje 4 Nte. (Calz. Azcapotzalco La Villa), Col. Santa Catarina", "7", 2.0));
+        parkItems.add(new parkings("Doble Vela", "Av. de las Granjas 161, El Jaguey", "6", 3.5));
+        return parkItems;
+    }
+
 
     private void GPSLocation() {
-        locManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
+        locManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             AlertDialog.Builder alertActuacionGPS1 = new AlertDialog.Builder(getActivity());
