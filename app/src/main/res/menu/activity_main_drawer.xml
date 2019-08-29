@@ -7,7 +7,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/main_nav_barCode"
-            android:icon="@drawable/ic_menu_share"
+            android:icon="@drawable/ic_id_bar"
             android:title="Mi ID" />
 
         <item

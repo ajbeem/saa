@@ -175,4 +175,8 @@ public class ingresar extends AppCompatActivity implements View.OnClickListener 
         startActivity(goN);
         this.finish();
     }
+	
+	private void startActivity (Class actividad){
+		new Intent (this , actividad);
+	}
 }
